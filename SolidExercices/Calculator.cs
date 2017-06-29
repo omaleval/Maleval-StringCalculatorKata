@@ -1,58 +1,28 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace SolidExercices
 {
     public class Calculator
     {
+        private readonly List<IOperateur> _listeOperateurs = new List<IOperateur>(new Somme(), new Soustraction(), new Multiplication(), new Division());
+
         public decimal Calculate(string operation)
         {
             // Variable retournée pour chaque opération
             decimal _resultat = 0m;
 
-            if(operation.Contains('+'))
+            foreach (var operateur in _listeOperateurs)
             {
-                var calcul = operation.Split('+');
-                    foreach (var nombre in calcul)
-                    {
-                        _resultat += Convert.ToDecimal(nombre);
-                    }
-                    return _resultat;
-            }
-
-            if (operation.Contains('-'))
-            {
-                var calcul = operation.Split('-');
-                foreach (var nombre in calcul)
-                {
-                    _resultat -= Convert.ToDecimal(nombre);
-                }
-                return _resultat;
-            }
-
-            if (operation.Contains('*'))
-            {
-                var calcul = operation.Split('*');
-                foreach (var nombre in calcul)
-                {
-                    _resultat *= Convert.ToDecimal(nombre);
-                }
-                return _resultat;
-            }
-
-            if (operation.Contains('/'))
-            {
-                var calcul = operation.Split('/');
-                foreach (var nombre in calcul)
-                {
-                    _resultat /= Convert.ToDecimal(nombre);
-                }
-                return _resultat;
+                _resultat = operateur.Calcule(operation);
             }
 
             return _resultat;
 
-            //throw new ArgumentException("Calcul impossible");
+            ////////////////////////////////////////////
+
+            throw new ArgumentException("Calcul impossible");
         }
+
     }
 }

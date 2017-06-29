@@ -17,11 +17,11 @@ A LA FIN DU TP: pensez à pousser vos commits sur votre compte GitHub et envoyer 
 Réponses aux questions posées
 -----------------------------
 
-Q1) On peut créer un dictionnaire d'opérations pour éviter les longs switchs ou boucles if.
+Q1) On peut créer un dictionnaire d'opérations ou une interface pour éviter les longs switchs ou boucles if.
 
 Q2) L'objectif de cette programmation objet est d'avoir des objets qui contiennent à la fois des données et des comportements.
 
-Q3) On utilise le principe des interfaces pour abstraire les opérations.
+Q3) On applique dans ce cas le principe de responsabilité unique
 
 Q4)
 
