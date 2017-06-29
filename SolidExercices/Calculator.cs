@@ -1,13 +1,12 @@
-﻿using System;
-using System.Linq;
-
-namespace SolidExercices
+﻿namespace SolidExercices
 {
     public class Calculator
     {
-        public double Calculate(string operation)
+        public decimal Calculate(string operation)
         {
-            throw new NotImplementedException();
+            
+    
+
         }
     }
 }
