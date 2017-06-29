@@ -5,18 +5,17 @@ namespace SolidExercices
 {
     internal class Soustraction : IOperateur
     {
+        public char Character = '-';
         private decimal _resultat;
 
         public decimal Calcule(string operation)
         {
-            if (operation.Contains('-'))
+            var calcul = operation.Split(Character);
+            foreach (var nombre in calcul)
             {
-                var calcul = operation.Split('-');
-                foreach (var nombre in calcul)
-                {
-                    _resultat += Convert.ToDecimal(nombre);
-                }
+                _resultat += Convert.ToDecimal(nombre);
             }
+
             return _resultat;
         }
 

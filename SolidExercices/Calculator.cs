@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SolidExercices
 {
     public class Calculator
     {
-        private readonly List<IOperateur> _listeOperateurs = new List<IOperateur>(new Somme(), new Soustraction(), new Multiplication(), new Division());
+        private readonly List<IOperateur> _listeOperateurs = new List<IOperateur> { new Somme(), new Soustraction(), new Multiplication(), new Division() };
+        public char Character;
 
         public decimal Calculate(string operation)
         {
@@ -14,14 +16,14 @@ namespace SolidExercices
 
             foreach (var operateur in _listeOperateurs)
             {
-                _resultat = operateur.Calcule(operation);
+                if (operation.Contains(Character))
+                {
+                    _resultat = operateur.Calcule(operation);
+                }
+                
             }
-
             return _resultat;
-
-            ////////////////////////////////////////////
-
-            throw new ArgumentException("Calcul impossible");
+           
         }
 
     }

@@ -21,17 +21,8 @@ namespace SolidExercices
                     Console.WriteLine("ERROR: " + e.Message);
                 }
             }
+            Console.ReadKey();
         }
     }
 }
 
-namespace SolidExercices.Console
-{
-    public class CalculatorTrainer
-    {
-        public void Run()
-        {
-            throw new NotImplementedException();
-        }
-    }
-}

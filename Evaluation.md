@@ -23,7 +23,7 @@ Q2) L'objectif de cette programmation objet est d'avoir des objets qui contienne
 
 Q3) On applique dans ce cas le principe de responsabilité unique
 
-Q4)
+Q4) De nombreuses opérations dans la classe CalculatorTrainer sortent des exceptions non gérées. Il faut établir des try/catch pour celles-ci
 
 Q5)
 
