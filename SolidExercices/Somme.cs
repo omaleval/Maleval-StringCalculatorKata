@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Linq;
-using System.Xml;
 
 namespace SolidExercices
 {
     internal class Somme : IOperateur
     {
-        public char Character = '+';
+        public char Character
+        {
+            get { return '+'; }
+        }
+
         private decimal _resultat;
 
         public decimal Calcule(string operation)
@@ -20,7 +22,7 @@ namespace SolidExercices
                     _resultat += Convert.ToDecimal(nombre);
                 }
             }
-            catch (System.FormatException e)
+            catch (FormatException)
             {
                 throw new ArgumentException("Impossible : Des types ne sont pas décimaux");
             }

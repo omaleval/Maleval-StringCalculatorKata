@@ -5,6 +5,7 @@ namespace SolidExercices
     public class CalculatorTrainer
     {
         private readonly string[] _operations = {"1+2,3", "2 x 3,6", "6-1-3,8", "6,6/3", "6/0", "not an operation", "a+1", "12", ""};
+        public char Character;
 
         public void Run()
         {
@@ -20,6 +21,7 @@ namespace SolidExercices
                 {
                     Console.WriteLine("ERROR: " + e.Message);
                 }
+
             }
             Console.ReadKey();
         }

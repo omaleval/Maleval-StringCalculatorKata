@@ -1,11 +1,13 @@
 using System;
-using System.Linq;
 
 namespace SolidExercices
 {
     internal class Soustraction : IOperateur
     {
-        public char Character = '-';
+        public char Character
+        {
+            get { return '-'; }
+        }
         private decimal _resultat;
 
         public decimal Calcule(string operation)

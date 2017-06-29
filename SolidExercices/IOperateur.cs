@@ -5,5 +5,6 @@ namespace SolidExercices
     internal interface IOperateur
     {
         decimal Calcule(string operation);
+        char Character { get; }
     }
 }
