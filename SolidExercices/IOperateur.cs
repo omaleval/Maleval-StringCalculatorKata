@@ -2,7 +2,7 @@
 
 namespace SolidExercices
 {
-    internal interface IOperateur
+    public interface IOperateur
     {
         decimal Calcule(string operation);
         char Character { get; }

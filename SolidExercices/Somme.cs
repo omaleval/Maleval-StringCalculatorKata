@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 
 namespace SolidExercices
 {
-    internal class Somme : IOperateur
+    public class Somme : IOperateur
     {
         public char Character
         {
@@ -15,8 +16,10 @@ namespace SolidExercices
         {
 
             var calcul = operation.Split(Character);
+
             try
             {
+
                 foreach (var nombre in calcul)
                 {
                     _resultat += Convert.ToDecimal(nombre);

@@ -1,8 +1,9 @@
 using System;
+using System.Linq;
 
 namespace SolidExercices
 {
-    internal class Multiplication : IOperateur
+    public class Multiplication : IOperateur
     {
         public char Character
         {
@@ -14,9 +15,11 @@ namespace SolidExercices
         {
 
             var calcul = operation.Split(Character);
-            foreach (var nombre in calcul)
+            var _resultat = Convert.ToDecimal(calcul[0]);
+
+            foreach (var nombre in calcul.Skip(1))
             {
-                _resultat += Convert.ToDecimal(nombre);
+                _resultat *= Convert.ToDecimal(nombre);
             }
 
             return _resultat;
