@@ -14,10 +14,18 @@ namespace SolidExercices
         {
 
             var calcul = operation.Split(Character);
-            foreach (var nombre in calcul)
+            try
             {
-                _resultat += Convert.ToDecimal(nombre);
+                foreach (var nombre in calcul)
+                {
+                    _resultat += Convert.ToDecimal(nombre);
+                }
             }
+            catch (DivideByZeroException)
+            {
+                throw new ArgumentException("Impossible : Division par 0!");
+            }
+
 
             return _resultat;
         }

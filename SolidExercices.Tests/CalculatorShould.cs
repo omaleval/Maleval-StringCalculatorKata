@@ -13,6 +13,7 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(3.3m);
         }
 
+        [Test]
         public void CalculateASubsraction()
         {
             var calculator = new Calculator();
@@ -20,6 +21,7 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(9.2m);
         }
 
+        [Test]
         public void CalculateAProduct()
         {
             var calculator = new Calculator();
@@ -27,6 +29,7 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(54m);
         }
 
+        [Test]
         public void CalculateADivision()
         {
             var calculator = new Calculator();
